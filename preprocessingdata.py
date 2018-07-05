@@ -7,7 +7,20 @@ from sklearn import preprocessing
 train = pd.read_csv("F:\\study\\datasets\\tit\\train.csv")
 test = pd.read_csv("F:\\study\\datasets\\tit\\test.csv")
 
+def get_object(df):
+    obj = []
+    for col in df.columns:
+        if not np.issubdtype(df[col].dtype, np.number):
+            obj.append(col)
+    return obj
 
+
+def get_naData(df):
+    na = []
+    for col in df.columns:
+        if df[col].isnull().any():
+            na.append(col)
+    return na
 # preparing the data
 # NAME column
 def get_surname(df):
