@@ -18,7 +18,7 @@ def main():
         train[train_Obj[i]] = preprocessingdata.encode(train[train_Obj[i]])
     for i in range(len(test_Obj)):
         test[test_Obj[i]] = preprocessingdata.encode(test[test_Obj[i]])
-    
+
     train_na = preprocessingdata.get_naData(train)
     test_na = preprocessingdata.get_naData(test)
 
@@ -27,8 +27,6 @@ def main():
     for i in range(len(test_na)):
         test[test_na[i]] = preprocessingdata.fill(test[test_na[i]])
 
+
 if __name__ == '__main__':
     main()
-
-
-    
