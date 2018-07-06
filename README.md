@@ -1,0 +1,1 @@
+# Titanic comptition in Kaggle
